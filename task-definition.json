@@ -1,0 +1,24 @@
+{
+  "family": "nodejs-containers",
+  "containerDefinitions": [
+    {
+      "name": "store-demo",
+      "image": "306523521021.dkr.ecr.us-east-2.amazonaws.com/docker_nodejs_demo:nodejs_demo_image:latest",
+      "cpu": 10,
+      "memory": 300,
+      "portMappings": [
+          {
+              "containerPort": 3000,
+              "hostPort": 3000
+          }
+      ],
+      "essential": true,
+      "environment": [
+          {
+              "name": "NODE_ENV",
+              "value": "production"
+          }
+      ]
+    }
+  ]
+}
